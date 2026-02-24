@@ -27,10 +27,7 @@ function getSSLValues() {
       ca: process.env.POSTGRES_CA,
     };
   }
-  return process.env.NODE_ENV === "development" ||
-    process.env.SERVICE != "supabase"
-    ? false
-    : true;
+  return process.env.NODE_ENV === "development" ? false : true;
 }
 
 export default {
